@@ -34,6 +34,6 @@ function App() {
       <Rodape mensagem="Feito por Row <3" />
     </>
   );
-}
+};
 
 export default App;
