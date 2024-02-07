@@ -4,4 +4,4 @@ const ContadorPage = () => {
     return <Contador />;
 };
 
-export default ContadorPage;
+export default ContadorPage;

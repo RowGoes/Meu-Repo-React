@@ -33,12 +33,12 @@ const PokemonPage = () => {
         listaTemporaria.push(resposta.data);
       } catch (error) {
         console.error("Erro ao buscar o pokemon");
-      }
-    }
-   }
+      };
+    };
+   };
+
     pegarListaDePokemons();
     console.log(referenciasPokemons);
     return <CardPokemon />;
-};
 
-export default PokemonPage;
+export default PokemonPage;
