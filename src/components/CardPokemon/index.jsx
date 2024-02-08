@@ -9,4 +9,4 @@ const CardPokemon = ({url, nome, foto, id}) => {
     );
 };
 
-export default CardPokemon;
+export default CardPokemon;

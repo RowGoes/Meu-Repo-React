@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import Botao from "../Botao";
 import "./styles.css";
 
@@ -7,12 +7,13 @@ const Contador = () => {
 
     const incrementar = () => {
         // setValor(Valor + 1);
-        // boa pratica:display: setValor((valorAnterior)) => +1);
+        // boa pratica:
+        setValor((valorAnterior) => valorAnterior + 1);
     };
 
     const decrementar = () => {
         // setValor(Valor - 1);
-        // boa pratica::after
+        // boa pratica:
         setValor((valorAnterior) => valorAnterior - 1); 
     };
 
@@ -28,4 +29,4 @@ const Contador = () => {
     );
 };
 
-export default Contador
+export default Contador;
