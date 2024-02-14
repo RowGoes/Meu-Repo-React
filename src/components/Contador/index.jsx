@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Botao from "../Botao";
-import "./styles.css";
+import "./style.css";
 
 const Contador = () => {
     const [valor, setValor] = useState(0);
