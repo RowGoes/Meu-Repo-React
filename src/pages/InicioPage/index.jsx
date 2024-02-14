@@ -4,7 +4,7 @@ import ListaDeEstudantes from "../../components/ListaDeEstudantes";
 import { estudantes } from "../../data/estudantes";
 
 const EstudantesPage = () => {
-    const listaStorage = localStorege.getItem("estudantes");
+    const listaStorage = localStorage.getItem("estudantes");
     const [lista, setLista] = useState(JSON.parse(listaStorage) || estudantes);
 
     // onCreate

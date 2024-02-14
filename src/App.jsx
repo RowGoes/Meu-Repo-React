@@ -1,7 +1,7 @@
+import {Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 import Rodape from "./components/Rodape";
 import ContadorPage from "./pages/ContadorPage";
-import {Route, Routes} from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
 import SobrePage from "./pages/SobrePage";
 import SobreMimPage from "./pages/SobrePage/SobreMimPage";
