@@ -5,7 +5,7 @@ import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
-import {useState} from "react";
+import { useState } from "react";
 
 const EnderecoPage = () => {
     const [cep, setCep] = useState("");

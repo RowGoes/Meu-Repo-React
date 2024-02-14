@@ -7,7 +7,7 @@ describe("Contador componente", () => {
       render(<Contador />);
 
       const valorDaTela = screen.getByText("0");
-      const botaoSoma = screen.ByRole("button", {name: "+"});
+      const botaoSoma = screen.getByRole("button", {name: "+"});
 
       expect(valorDaTela).toBeInTheDocument();
 
