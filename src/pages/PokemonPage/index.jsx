@@ -9,7 +9,9 @@ const PokemonPage = () => {
 
     const pegar100ReferenciasPokemons = async () => {
         try {
-        const resposta = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=100");
+        const resposta = await axios.get(
+            "https://pokeapi.co/api/v2/pokemon?limit=100"
+            );
         setReferenciasPokemons(resposta.data.results);
         } catch (error) {
         console.error("Erro ao buscar as referencias dos pokemons", error);
@@ -21,7 +23,7 @@ const PokemonPage = () => {
         pegar100ReferenciasPokemons();
    }, []);
 
-   const pegarListaDePokemons = ansyc () => {
+   const pegarListaDePokemons = async () => {
     const listaTemporaria = [];
      
     for (const referencia of referenciasPokemons) {
@@ -41,13 +43,13 @@ const PokemonPage = () => {
     }, [referenciasPokemons]);
 
     return (
-    <div className="pokemon-conatiner">
+    <div className="pokemon-container">
         {listaPokemons.map((pokemon) => (
             <CardPokemon 
             name={pokemon.name} 
             foto={pokemon.sprites.front_default}
             id={pokemon.id}
-            url={pokemon.forms(0).url}
+            url={pokemon.forms[0].url}
         />
        ))}
      </div>

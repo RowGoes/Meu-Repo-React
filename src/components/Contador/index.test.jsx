@@ -10,11 +10,10 @@ describe("Contador componente", () => {
       const botaoSoma = screen.ByRole("button", {name: "+"});
 
       expect(valorDaTela).toBeInTheDocument();
-    });
 
-    fireEvent.click(botaoSoma);
+        fireEvent.click(botaoSoma);
 
-    expect(screen.getByText("1")).toBeInTheDocument();
+        expect(screen.getByText("1")).toBeInTheDocument();
     });
 
     it("deve verificar se o contador está sendo decrementado", () => {
@@ -35,12 +34,12 @@ describe("Contador componente", () => {
 
         const valorDaTela = screen.getByText("0");
         const botaoSoma = screen.getByRole("button", { name: "+"});
-        expect(botaoSubtracao).screen.getByRole("button", {name: "-"});
+        const botaoSubtracao = screen.getByRole("button", {name: "-"});
 
 
         expect(valorDaTela).toBeInTheDocument();
-        expect(valorSoma).toBeInTheDocument();
-        expect(valorSubtracao).toBeInTheDocument();
+        expect(botaoSoma).toBeInTheDocument();
+        expect(botaoSubtracao).toBeInTheDocument();
               
 
         fireEvent.click(botaoSubtracao);
