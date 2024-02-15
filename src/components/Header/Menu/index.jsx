@@ -16,11 +16,6 @@ const Menu = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link className="menu-item" to="/pokemons">
-                        Pokemons
-                    </Link>
-                </li>
-                <li>
                     <Link className="menu-item" to="/endereco">
                         Endereço
                     </Link>
