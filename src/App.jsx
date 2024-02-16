@@ -10,6 +10,7 @@ import PokemonPage from "./pages/PokemonPage";
 import EnderecoPage from "./pages/EnderecoPage";
 import EstudantesPage from "./pages/EstudantesPage";
 
+
 function App() {
   return (
     <>
@@ -31,7 +32,8 @@ function App() {
         </Routes>
       </div>
 
-      <Rodape mensagem="Feito por Row <3" />
+      <Rodape mensagem="Feito por Row!" />
+    
     </>
   );
 };

@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import CardPokemon from "../../components/CardPokemon";
+import Loading from "../../components/Loading";
 import axios from "axios";
 import "./styles.css";
 
 const PokemonPage = () => {
     const [referenciasPokemons, setReferenciasPokemons] = useState([]);
     const [listaPokemons, setListaPokemons] = useState([]);
+    const [showLoading, setShowLoading] = useState(false);   
 
+    
     const pegar100ReferenciasPokemons = async () => {
-        try {
+              try {
         const resposta = await axios.get(
             "https://pokeapi.co/api/v2/pokemon?limit=100"
             );
@@ -24,6 +27,7 @@ const PokemonPage = () => {
    }, []);
 
    const pegarListaDePokemons = async () => {
+    setShowLoading(true);
     const listaTemporaria = [];
      
     for (const referencia of referenciasPokemons) {
@@ -34,8 +38,8 @@ const PokemonPage = () => {
         console.error("Erro ao buscar o pokemon", error);
       }
     }
-
     setListaPokemons(listaTemporaria);
+    setShowLoading(false);
    };
 
     useEffect(() => {
@@ -52,7 +56,10 @@ const PokemonPage = () => {
             url={pokemon.forms[0].url}
         />
        ))}
+       
+        { showLoading && <Loading />}
      </div>
+    
     );
   };
 
