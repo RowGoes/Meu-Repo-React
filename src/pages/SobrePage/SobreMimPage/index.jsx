@@ -11,7 +11,10 @@ const SobreMimPage = () => {
             <br/> 
             <br/> 
             <figure>
-            <img className="foto-perfil" src="./Row_perfil2.jpg" alt="foto-perfil"/>
+            <img 
+                className="foto-perfil" 
+                src="../../Row_perfil2.jpg" 
+                alt="foto-perfil"/>
             </figure>
             <br/>
             <h2>Rôana Góes</h2>

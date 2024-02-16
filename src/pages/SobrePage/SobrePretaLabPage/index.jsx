@@ -8,7 +8,10 @@ const SobrePretaLabPage = () => {
             <h1>Sobre PretaLab page</h1>
             <br/>
             <figure>
-            <img className="foto-pretalab" src="./pretalab.jpg" alt="foto-pretalab"/>
+            <img 
+                className="foto-pretalab" 
+                src="../../pretalab.jpg"
+                alt="foto-pretalab"/>
             </figure>
             <br/>
             <h2>Preta Lab</h2>

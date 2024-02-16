@@ -12,7 +12,7 @@ const Rodape = ({ mensagem }) => {
             <ol id="contato">
                 
                 <li>
-                    <FontAwesomeIcon icon={faEnvelopeSquare} />
+                     <FontAwesomeIcon icon={faEnvelopeSquare} />
                     <a href="malito:roana.goes@gmail.com" target="_blank">roana.goes@gmail.com </a> <br/><br/>
                 </li>
                 
@@ -22,7 +22,7 @@ const Rodape = ({ mensagem }) => {
                 </li>
                 
                 <li>
-                    <FontAwesomeIcon icon={faInstagram} />    
+                    <FontAwesomeIcon icon={faInstagram} />
                     <a href="https://www.instagram.com/rowgoes/" target="_blank">rowgoes</a>  <br/><br/>
                 </li>
                 
