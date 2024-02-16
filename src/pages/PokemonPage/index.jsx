@@ -7,7 +7,8 @@ import "./styles.css";
 const PokemonPage = () => {
     const [referenciasPokemons, setReferenciasPokemons] = useState([]);
     const [listaPokemons, setListaPokemons] = useState([]);
-    const [showLoading, setShowLoading] = useState(false);   
+    const [showLoading, setShowLoading] = useState(false);
+    const [searchTerm, setSearchTerm] = useState("");   
 
     
     const pegar100ReferenciasPokemons = async () => {
@@ -46,9 +47,24 @@ const PokemonPage = () => {
         pegarListaDePokemons();
     }, [referenciasPokemons]);
 
+    const handleSearchChange = (event) => {
+      setSearchTerm(event.target.value);
+    }
+
+    const filteredPokemons = listaPokemons.filter((pokemon) =>
+    pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+
     return (
     <div className="pokemon-container">
-        {listaPokemons.map((pokemon) => (
+        <input
+          type="text"
+          placeholder="Pesquisar Pokémon..."
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+
+        {filteredPokemons.map((pokemon) => (
             <CardPokemon 
             name={pokemon.name} 
             foto={pokemon.sprites.front_default}
